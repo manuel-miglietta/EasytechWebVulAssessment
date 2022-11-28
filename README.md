@@ -1,1 +1,1 @@
-# EasytechWebVulAssestment
+# EasytechWebVulAssessment
