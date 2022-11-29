@@ -49,8 +49,8 @@ software name and its version (or CPE), so one can still have the desired privac
 --   </table>
 -- </table>
 
-dependencies = {"http-vulners-regex"}
-author = 'gmedian AT vulners DOT com'
+dependencies = {"http-easytechvulassessment-regex"}
+author = 'webeasytech DOT com'
 license = "Same as Nmap--See https://nmap.org/book/man-legal.html"
 categories = {"vuln", "safe", "external", "default"}
 
@@ -73,7 +73,7 @@ end
 
 local cve_meta = {
   __tostring = function(me)
-      return ("\t%s\t%s\thttps://www.cve.org/CVERecord?id=%s/%s%s"):format(me.id, me.cvss or "", me.type, me.id, me.is_exploit and '\t   ⚠ EXPLOIT ⚠' or '')
+      return ("\t%s\t%s\thttps://www.cve.org/CVERecord?id=%s"):format(me.id, me.cvss or "", me.id, me.is_exploit and ' !!!EXPLOIT!!!' or '')
   end,
 }
 
