@@ -25,13 +25,13 @@ software name and its version (or CPE), so one can still have the desired privac
 -- 53/tcp   open     domain             ISC BIND DNS
 -- | vulners:
 -- |   ISC BIND DNS:
--- |     CVE-2012-1667    8.5    https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1667
--- |     CVE-2002-0651    7.5    https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-0651
--- |     CVE-2002-0029    7.5    https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0029
--- |     CVE-2015-5986    7.1    https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-5986
--- |     CVE-2010-3615    5.0    https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3615
--- |     CVE-2006-0987    5.0    https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-0987
--- |_    CVE-2014-3214    5.0    https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3214
+-- |     CVE-2012-1667    8.5    https://www.cve.org/CVERecord?id=CVE-2012-1667
+-- |     CVE-2002-0651    7.5    https://www.cve.org/CVERecord?id=CVE-2022-0651
+-- |     CVE-2002-0029    7.5    https://www.cve.org/CVERecord?id=CVE-2002-0029
+-- |     CVE-2015-5986    7.1    https://www.cve.org/CVERecord?id=CVE-2015-5986
+-- |     CVE-2010-3615    5.0    https://www.cve.org/CVERecord?id=CVE-2010-3615
+-- |     CVE-2006-0987    5.0    https://www.cve.org/CVERecord?id=CVE-2006-0987
+-- |_    CVE-2014-3214    5.0    https://www.cve.org/CVERecord?id=CVE-2014-3214
 --
 -- @xmloutput
 -- <table key="cpe:/a:isc:bind:9.8.2rc1">
@@ -73,7 +73,7 @@ end
 
 local cve_meta = {
   __tostring = function(me)
-      return ("\t%s\t%s\thttps://cve.mitre.org/cgi-bin/cvename.cgi?name=%s/%s%s"):format(me.id, me.cvss or "", me.type, me.id, me.is_exploit and '\t   ⚠ EXPLOIT ⚠' or '')
+      return ("\t%s\t%s\thttps://www.cve.org/CVERecord?id=%s/%s%s"):format(me.id, me.cvss or "", me.type, me.id, me.is_exploit and '\t   ⚠ EXPLOIT ⚠' or '')
   end,
 }
 
